@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atölye ZOA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="nav-link active">Hakkında</a>
+    <a href="atolyezoa.html" class="nav-link">Atölye ZOA</a>
+  </div>
+
+  <div class="container">
+    <div class="about">
+      <div style="margin-bottom: 10px;">Me</div>
+      <div style="margin-bottom: 20px;">
+            Zehra Dinç, 2003 yılında Hatay’da doğdu. İlk ve orta öğrenimini Hatay’da tamamladı. 2017-2021 yılları arasında Hatay Bedii Sabuncu Güzel Sanatlar Lisesi’nde Resim Bölümü eğitimini tamamladı. Ardından 2021-2025 yılları arasında Hatay Mustafa Kemal Üniversitesi Güzel Sanatlar Fakültesi Resim Bölümünden dereceyle mezun oldu.
+      </div>
+      <div style="margin-bottom: 20px;">
+            Yurt içinde ödüller kazanarak çeşitli sergilere dahil oldu. Bunun yanında  Contemporary İstanbul Vakfı ‘Sanat Kariyeri ve Mesleki Gelişim Kursu’ kısa dönem proje asistanı olarak görev aldı.
+      </div>
+      <div>
+            Üretimlerinde “Benlik” ve “Benlik Kaygısı” kavramlarını incelerken, bireyin iç dünyasına, psikolojik katmanlarına ve yansıma üzerinden oluşan algısal kırılmalara odaklanır.
+      </div>
+    </div>
+    <img src="images/Hakkında/profile.jpg" alt="profile" class="profile-img">
+  </div>
+
+  <div class="buttons">
+    <a href="portfolio.html" class="btn">Sanatçı Portfolio</a>
+    <a href="iletisim.html" class="btn">İletişim</a>
+  </div>
+
+  <div class="gallery-wrapper">
+    <div class="gallery" id="gallery">
+      <div class="gallery-item"><img src="images/gallery/1.jpg" alt="image1"></div>
+      <div class="gallery-item"><img src="images/gallery/2.jpeg" alt="image2"></div>
+      <div class="gallery-item"><img src="images/gallery/3.jpg" alt="image3"></div>
+      <div class="gallery-item"><img src="images/gallery/4.jpg" alt="image4"></div>
+    </div>
+  </div>
+  <script>
+    // Sonsuz ve kopuksuz kayan galeri için JS
+    const gallery = document.getElementById('gallery');
+    // Galeri içeriğini iki kez kopyala
+    gallery.innerHTML += gallery.innerHTML;
+    // Kopyalama sonrası ilk setin genişliğini ölç
+    const items = gallery.querySelectorAll('.gallery-item');
+    let firstSetWidth = 0;
+    for (let i = 0; i < items.length / 2; i++) {
+      firstSetWidth += items[i].offsetWidth;
+      if (i !== 0) firstSetWidth += 30; // gap: 30px
+    }
+    let pos = 0;
+    function animateGallery() {
+      pos -= 1; // Hız
+      if (Math.abs(pos) >= firstSetWidth) {
+        pos = 0;
+      }
+      gallery.style.transform = `translateX(${pos}px)`;
+      requestAnimationFrame(animateGallery);
+    }
+    animateGallery();
+  </script>
+</body>
+</html>

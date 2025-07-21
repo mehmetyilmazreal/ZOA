@@ -23,15 +23,30 @@ body {
   color: #3b4447;
   border-bottom: 3px solid #3b4447;
 }
+.nav-link {
+  color: #b6ada2;
+  text-decoration: none;
+  font-family: 'Kalnia', serif;
+  font-size: 20px;
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.nav-link.active {
+  color: #3b4447;
+  /* border-bottom: 3px solid #3b4447; */
+}
+.nav-link:hover {
+  color: #3b4447;
+}
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 100px;
-  gap: 100px;
+  gap: 150px;
 }
 .about {
-  max-width: 600px;
+  max-width: 700px;
   font-size: 18px;
   color: #3b4447;
 }
@@ -51,48 +66,94 @@ body {
 }
 .btn {
   background: #d6a89e;
-  color: #3b4447;
+  color: #eceae7;
   font-family: 'Kalnia', serif;
   font-size: 20px;
   border: none;
   border-radius: 8px;
   padding: 14px 40px;
+  width: 300px;
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none;
+  text-align: center;
 }
 .btn:hover {
   background: #c89a8e;
 }
+.gallery-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
 .gallery {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 30px;
-  margin-bottom: 40px;
+  width: max-content;
 }
 .gallery-item {
   background: #a89e8c;
   color: #fff;
-  width: 220px;
-  height: 120px;
+  width: 280px;
+  height: 180px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
   font-family: 'Kalnia', serif;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-top: 40px;
   }
   .about {
-    max-width: 90vw;
+    max-width: 95vw;
+    font-size: 16px;
+    padding: 0 10px;
   }
-  .gallery {
+  .profile-img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .buttons {
     flex-direction: column;
     gap: 20px;
+    margin: 40px 0 40px 0;
+    width: 100%;
     align-items: center;
+  }
+  .btn {
+    width: 90vw;
+    max-width: 320px;
+    font-size: 18px;
+    padding: 14px 0;
+  }
+  .gallery-wrapper {
+    width: 100vw;
+    margin-bottom: 20px;
+  }
+  .gallery {
+    gap: 10px;
+  }
+  .gallery-item {
+    width: 80vw;
+    max-width: 320px;
+    height: 120px;
+    font-size: 18px;
   }
 }
