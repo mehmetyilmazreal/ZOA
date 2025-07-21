@@ -47,6 +47,7 @@
     const gallery = document.getElementById('gallery');
     // Galeri içeriğini iki kez kopyala
     gallery.innerHTML += gallery.innerHTML;
+    gallery.innerHTML += gallery.innerHTML;
     // Kopyalama sonrası ilk setin genişliğini ölç
     const items = gallery.querySelectorAll('.gallery-item');
     let firstSetWidth = 0;
