@@ -1,16 +1,13 @@
-html, body {
-  height: 100%;
+body {
+  font-family: 'AvantGarde Tx', sans-serif;
+  background: #fdfdfd;
+  color: #333;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.main-content {
-  flex: 1;
-}
+
 body.home-page {
   position: relative;
   z-index: 1;
@@ -193,6 +190,7 @@ section h2 {
   align-items: center;
   gap: 40px;
   text-align: left;
+  margin-top: 80px;
 }
 
 .workshop-image {
@@ -468,9 +466,6 @@ section h2 {
   background: none;
   border-radius: 0;
   box-shadow: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .center-contact {
   display: flex;
@@ -531,56 +526,5 @@ section h2 {
   .contact-actions {
     flex-direction: column;
     gap: 8px;
-  }
-}
-.contact-instagram-row {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 32px auto;
-  min-height: 500px;
-}
-.contact-instagram-row > section {
-  flex: 1 1 0;
-  min-width: 280px;
-  max-width: 500px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.contact-content.center-contact,
-.instagram-feed-section,
-.instagram-widget-container {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-@media (max-width: 900px) {
-  .contact-instagram-row {
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    min-height: unset;
-  }
-  .contact-instagram-row > section {
-    max-width: 100vw;
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
-  }
-  .contact-content.center-contact,
-  .instagram-feed-section,
-  .instagram-widget-container {
-    height: auto;
-    justify-content: flex-start;
   }
 }
