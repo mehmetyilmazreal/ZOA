@@ -3,67 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atölye ZOA</title>
+  <title>Atölye ZOA - Atölye</title>
   <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="navbar">
-    <a href="index.html" class="nav-link">Hakkında</a>
-    <a href="atolyezoa.html" class="nav-link active">Atölye ZOA</a>
-  </div>
+<body class="home-page">
 
-  <div class="container">
-    <div class="about">
-      <div style="margin-bottom: 10px;">Me</div>
-      <div style="margin-bottom: 20px;">
-            Zehra Dinç, 2003 yılında Hatay’da doğdu. İlk ve orta öğrenimini Hatay’da tamamladı. 2017-2021 yılları arasında Hatay Bedii Sabuncu Güzel Sanatlar Lisesi’nde Resim Bölümü eğitimini tamamladı. Ardından 2021-2025 yılları arasında Hatay Mustafa Kemal Üniversitesi Güzel Sanatlar Fakültesi Resim Bölümünden dereceyle mezun oldu.
+  <header class="main-header">
+    <h1>Atölye ZOA</h1>
+    <nav class="main-nav">
+      <a href="index.html">Hakkında</a>
+      <a href="atolyezoa.html">Atölye</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="upcoming-workshop" class="upcoming-workshop-section">
+      <h2>Sıradaki Workshop</h2>
+      <div class="workshop-content">
+        <img src="images/Hakkında/profile.jpg" alt="Sıradaki Workshop" class="workshop-image">
+        <div class="workshop-info">
+          <h3>Workshop Başlığı</h3>
+          <p>Bu atölyede, yaratıcılığınızın sınırlarını zorlayacak teknikler öğrenecek ve kendi özgün eserinizi yaratma fırsatı bulacaksınız. Renklerin ve dokuların büyülü dünyasına bir yolculuk sizi bekliyor.</p>
+          <p><strong>Tarih:</strong> 30 Ekim 2024</p>
+          <p><strong>Yer:</strong> Atölye ZOA, Çankaya, Ankara</p>
+          <p><strong>Kontenjan:</strong> 10 Kişi</p>
+          <a href="#" class="btn">Kayıt Ol</a>
+        </div>
       </div>
-      <div style="margin-bottom: 20px;">
-            Yurt içinde ödüller kazanarak çeşitli sergilere dahil oldu. Bunun yanında  Contemporary İstanbul Vakfı ‘Sanat Kariyeri ve Mesleki Gelişim Kursu’ kısa dönem proje asistanı olarak görev aldı.
+    </section>
+
+    <section id="past-workshops" class="past-workshops-section">
+      <h2>Geçmiş Workshoplar</h2>
+
+      <!-- Workshop 1 Galerisi -->
+      <div class="workshop-gallery-container">
+        <h3>Workshop 1: Renklerin Dansı</h3>
+        <div class="photo-album-advanced">
+          <div class="main-image-row">
+            <img src="images/Gallery/2.jpeg" alt="Prev" class="side-image prev-image">
+            <img src="images/Gallery/1.jpg" alt="Main" class="main-image">
+            <img src="images/Gallery/2.jpeg" alt="Next" class="side-image next-image">
+          </div>
+          <div class="thumbnail-gallery">
+            <img src="images/Gallery/1.jpg" alt="Thumbnail 1" class="thumbnail active" data-src="images/Gallery/1.jpg">
+            <img src="images/Gallery/2.jpeg" alt="Thumbnail 2" class="thumbnail" data-src="images/Gallery/2.jpeg">
+          </div>
+        </div>
       </div>
-      <div>
-            Üretimlerinde “Benlik” ve “Benlik Kaygısı” kavramlarını incelerken, bireyin iç dünyasına, psikolojik katmanlarına ve yansıma üzerinden oluşan algısal kırılmalara odaklanır.
+
+      <!-- Workshop 2 Galerisi -->
+      <div class="workshop-gallery-container">
+        <h3>Workshop 2: Doku ve Duygu</h3>
+        <div class="photo-album-advanced">
+          <div class="main-image-row">
+            <img src="images/Gallery/4.jpg" alt="Prev" class="side-image prev-image">
+            <img src="images/Gallery/3.jpg" alt="Main" class="main-image">
+            <img src="images/Gallery/4.jpg" alt="Next" class="side-image next-image">
+          </div>
+          <div class="thumbnail-gallery">
+            <img src="images/Gallery/3.jpg" alt="Thumbnail 3" class="thumbnail active" data-src="images/Gallery/3.jpg">
+            <img src="images/Gallery/4.jpg" alt="Thumbnail 4" class="thumbnail" data-src="images/Gallery/4.jpg">
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="contact-info">
+      <h3>İletişim</h3>
+      <p>Çankaya, Ankara, Türkiye</p>
+      <p>email@example.com</p>
     </div>
-    <img src="images/Hakkında/profile.jpg" alt="profile" class="profile-img">
-  </div>
+    <p>&copy; 2024 Atölye ZOA - Tüm Hakları Saklıdır.</p>
+  </footer>
 
-  <div class="buttons">
-    <a href="portfolio.html" class="btn">Sanatçı Portfolio</a>
-    <a href="iletisim.html" class="btn">İletişim</a>
-  </div>
-
-  <div class="gallery-wrapper">
-    <div class="gallery" id="gallery">
-      <div class="gallery-item"><img src="images/Gallery/1.jpg" alt="image1"></div>
-      <div class="gallery-item"><img src="images/Gallery/2.jpeg" alt="image2"></div>
-      <div class="gallery-item"><img src="images/Gallery/3.jpg" alt="image3"></div>
-      <div class="gallery-item"><img src="images/Gallery/4.jpg" alt="image4"></div>
-    </div>
-  </div>
   <script>
-    // Sonsuz ve kopuksuz kayan galeri için JS
-    const gallery = document.getElementById('gallery');
-    // Galeri içeriğini iki kez kopyala
-    gallery.innerHTML += gallery.innerHTML;
-    // Kopyalama sonrası ilk setin genişliğini ölç
-    const items = gallery.querySelectorAll('.gallery-item');
-    let firstSetWidth = 0;
-    for (let i = 0; i < items.length / 2; i++) {
-      firstSetWidth += items[i].offsetWidth;
-      if (i !== 0) firstSetWidth += 30; // gap: 30px
-    }
-    let pos = 0;
-    function animateGallery() {
-      pos -= 1; // Hız
-      if (Math.abs(pos) >= firstSetWidth) {
-        pos = 0;
+    function initializeAdvancedGallery(galleryContainer) {
+      const mainImage = galleryContainer.querySelector('.main-image');
+      const prevImage = galleryContainer.querySelector('.prev-image');
+      const nextImage = galleryContainer.querySelector('.next-image');
+      const thumbnails = galleryContainer.querySelectorAll('.thumbnail');
+      
+      const images = Array.from(thumbnails).map(thumb => thumb.dataset.src);
+      let currentIndex = 0;
+
+      function updateGallery(index) {
+        currentIndex = index;
+
+        mainImage.style.opacity = '0';
+        mainImage.style.transform = 'scale(0.95)';
+
+        setTimeout(() => {
+          mainImage.src = images[currentIndex];
+          prevImage.src = images[(currentIndex - 1 + images.length) % images.length];
+          nextImage.src = images[(currentIndex + 1) % images.length];
+
+          mainImage.style.opacity = '1';
+          mainImage.style.transform = 'scale(1)';
+
+          thumbnails.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === currentIndex);
+          });
+        }, 500);
       }
-      gallery.style.transform = `translateX(${pos}px)`;
-      requestAnimationFrame(animateGallery);
+
+      thumbnails.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => updateGallery(i));
+      });
+
+      prevImage.addEventListener('click', () => {
+        let newIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery(newIndex);
+      });
+
+      nextImage.addEventListener('click', () => {
+        let newIndex = (currentIndex + 1) % images.length;
+        updateGallery(newIndex);
+      });
+
+      // İlk yükleme
+      updateGallery(0);
     }
-    animateGallery();
+
+    document.querySelectorAll('.workshop-gallery-container').forEach(container => {
+      initializeAdvancedGallery(container);
+    });
   </script>
+
 </body>
 </html>
