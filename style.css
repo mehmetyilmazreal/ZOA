@@ -273,7 +273,7 @@ section h2 {
   margin-bottom: 20px;
 }
 .main-image-row .main-image {
-  width: 500px;
+  width: 700px;
   height: 500px;
   object-fit: cover;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
@@ -412,4 +412,45 @@ section h2 {
 .logo{
   width: 150px;
   height: auto;
+}
+
+/* Sosyal medya linkleri için özel stiller */
+.social-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+  justify-content: center;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  font-family: 'Avantgarde', 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+.social-link i {
+  margin-right: 7px;
+  font-size: 1.5em;
+  transition: color 0.2s;
+}
+.social-link.whatsapp {
+  color: #25d366;
+}
+.social-link.instagram {
+  color: #e1306c;
+}
+.social-link:hover {
+  color: #111;
+  transform: scale(1.07);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.social-link.whatsapp:hover i {
+  color: #128c7e;
+}
+.social-link.instagram:hover i {
+  color: #c13584;
 }
